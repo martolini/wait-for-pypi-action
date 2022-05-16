@@ -6,7 +6,7 @@ jobs:
   test:
     runs-on: ubuntu-latest
     steps:
-      - uses: martolini/wait-for-pypi-action
+      - uses: martolini/wait-for-pypi-action@main
         with:
           package_name: databutton2
           package_version: 0.6.19
