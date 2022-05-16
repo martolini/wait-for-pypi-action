@@ -5,6 +5,7 @@ PACKAGE_NAME=$1
 PACKAGE_VERSION=$2
 TIMEOUT=$3
 DELAY_BETWEEN_REQUESTS=$4
+
 URL=https://pypi.org/project/$PACKAGE_NAME/$PACKAGE_VERSION/
 STATUS=200 timeout \
   --foreground -s TERM $TIMEOUT bash -c \
