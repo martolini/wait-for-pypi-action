@@ -7,6 +7,8 @@ TIMEOUT=$3
 DELAY_BETWEEN_REQUESTS=$4
 
 declare URL=https://pypi.org/project/$PACKAGE_NAME/$PACKAGE_VERSION/
+
+DELAY_BETWEEN_REQUESTS=$DELAYBETWEEN_REQUESTS \
 URL=$URL STATUS=200 timeout \
   --foreground -s TERM $TIMEOUT bash -c \
     'while [[ ${STATUS_RECEIVED} != ${STATUS} ]];\
