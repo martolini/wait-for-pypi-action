@@ -18,11 +18,11 @@ inputs:
 runs:
   using: 'composite'
   steps:
-    - name: Waiting for {{ inputs.package_name }}=={{ inputs.version }}
+    - name: Waiting for ${{ inputs.package_name }}==${{ inputs.version }}
       run: |
         ./wait_for_pypi.sh \
-          {{ inputs.package_name }} \
-          {{ inputs.version }} \
-          {{ inputs.timeout }} \
-          {{ inputs.delay_between_requests}}
+          ${{ inputs.package_name }} \
+          ${{ inputs.version }} \
+          ${{ inputs.timeout }} \
+          ${{ inputs.delay_between_requests }}
       shell: bash
