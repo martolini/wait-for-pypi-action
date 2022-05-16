@@ -11,4 +11,4 @@ jobs:
           package_name: databutton2
           package_version: 0.6.19
           timeout: 30
-          delay: 1
+          delay_between_requests: 1
